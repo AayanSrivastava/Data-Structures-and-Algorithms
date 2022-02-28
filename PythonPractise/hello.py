@@ -1352,3 +1352,21 @@
 
 # obj=Solution()
 # print(obj.sortSentence("is2 sentence4 This1 a3"))
+
+# class Solution:
+#     def heightChecker(self, heights: List[int]) -> int:
+#         output=[0 for i in range(len(heights))]
+#         count=[0 for i in range(101)]
+#         for i in range(1,len(heights)):
+#             count[heights[i]]+=1
+#         for i in range(1,101):
+#             count[i]+=count[i-1]
+#         for i in range(len(heights)-1,-1,-1):
+#             output[count[heights[i]]]=heights[i]
+#             count[heights[i]]-=1
+#         return output
+l=[1,6,3,8,5]
+c=[0 for i in range(len(l))]
+for i in range(max(l)):
+        c[l[i]]+=1
+print(c)
