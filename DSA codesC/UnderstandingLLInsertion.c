@@ -44,6 +44,25 @@ void insertany(struct Node *p,int k,int x)
     t->next=p->next;
     p->next=t;
 }
+
+//Insertion in sorted List
+
+void sortedinsertion(struct Node *p,int k)
+{
+    struct Node *t,*prev,*current;
+    t=(struct Node *)malloc(sizeof(struct Node ));
+    t->data=k;
+    prev=head;
+    current=head;
+    while(current->data<=k)
+    {
+        prev=current;
+        current=current->next;
+    }
+    t->next=prev->next;
+    prev->next=t;
+}
+
 void display(struct Node *p)
 {
     while(p!=NULL)
@@ -62,14 +81,16 @@ int main()
     t->next=NULL;
     head=t;
     tail=t;
-    insert(head,7);
-    insert(head,5);
-    insert(head,9);
-    inserttail(tail,1);
-    inserttail(tail,2);
-    insertany(head,4,4);
-    insertany(head,4,2);
+    insert(head,3);
+    insert(head,2);
+    insert(head,1);
+    inserttail(tail,4);
+    inserttail(tail,5);
+    // insertany(head,4,4);
+    // insertany(head,4,2);
     display(head);
     printf("%d\n",head->data);
     printf("%d\n",tail->data);
+    sortedinsertion(head,4);
+    display(head);
 }
