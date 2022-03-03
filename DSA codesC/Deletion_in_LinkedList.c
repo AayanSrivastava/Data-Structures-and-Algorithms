@@ -55,13 +55,16 @@ void deleteany(struct Node *p,int pos)
     }
     else
     {
-        for(i=0;i<pos-1;i++)
+        for(i=0;i<pos-1 && current;i++)
         {
         prev=current;
         current=current->next;
         }
-        prev->next=current->next;
-        free(current);
+        if(current)
+        {
+            prev->next=current->next;
+            free(current);
+        }
     }
 }
 

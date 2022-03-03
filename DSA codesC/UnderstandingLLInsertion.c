@@ -46,7 +46,10 @@ void insertany(struct Node *p,int k,int x)
 }
 
 //Insertion in sorted List
-
+//we need 3 extra pointers , we can do it in 2 also by not taking current and using p
+//1. A new node
+//2. prev pointing to head
+//3. Current pointing to head
 void sortedinsertion(struct Node *p,int k)
 {
     struct Node *t,*prev,*current;
@@ -59,8 +62,16 @@ void sortedinsertion(struct Node *p,int k)
         prev=current;
         current=current->next;
     }
+    if(current==head)
+    {
+        t->next=head;
+        head=t;
+    }
+    else
+    {
     t->next=prev->next;
     prev->next=t;
+    }
 }
 
 void display(struct Node *p)
@@ -91,6 +102,6 @@ int main()
     display(head);
     printf("%d\n",head->data);
     printf("%d\n",tail->data);
-    sortedinsertion(head,4);
+    sortedinsertion(head,0);
     display(head);
 }
