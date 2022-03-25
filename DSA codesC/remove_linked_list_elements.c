@@ -27,18 +27,21 @@ void create(int A[],int n)
     }
 }
 
-struct node *detectCycle(struct node *head) {
-    int c=0;
-    struct node* fast=head,*slow=head;
-    while(slow && fast && fast->next)
+struct node* removeElements(struct node* head, int val){
+    struct node *f1=head;
+    while(head && head->val==val)
     {
-        fast=fast->next->next;
-        c++;
-        slow=slow->next;
-        if (fast==slow)
-            return c;
+        head=head->next;    
     }
-    return -1;
+    f1=head;
+    while(f1 && f1->next)
+    {
+        if(f1->next->val==val)
+            f1->next=f1->next->next;
+        else
+            f1=f1->next;
+    }
+    return head;
 }
 
 void display(struct node *p)
@@ -60,8 +63,9 @@ int main()
     {
         scanf("%d",&a[i]);
     }
+    printf("\n");
     create(a,n);
-    swapPairs(first);
+    removeElements(first,6);
     display(first);
     return 0;
 }
