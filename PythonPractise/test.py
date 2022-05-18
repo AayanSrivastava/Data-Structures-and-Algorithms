@@ -97,3 +97,45 @@
 # print(l1)
 # print(l2)
 # print(l1[:k])
+
+# votes=["ABC","ACB","ABC","ACB","ACB"]
+# a=[]
+# for i in votes:
+#     a.append()
+            
+# h={}
+# for i in a:
+#     if i in h:
+#         h[i]+=1
+#     else:
+#         h[i]=1
+
+# b=[]
+# for i in h:
+#     b.append((i,h[i]))
+# print(b)
+
+# a=[2,1,5]
+# b=[]
+# for i in range(len(a)-1):
+# 	t=max(a[i+1:len(a)])
+# 	b.append(t)
+# b.append(0)
+# print(b)
+
+# a=[1,2,3,4,5,6,7,8]
+# f=2
+# c=[]
+# for i in range(0,9,f+1):
+#     b=[]
+#     b.append(a[i:f])
+#     c.append(b)
+# print(c)
+
+a=[1,2,3,4]
+for i in range(len(a)):
+    if i%2!=0:
+        a.insert(i,(a[len(a)-1]))
+        # a.remove((a[len(a)-1]))
+        a.pop()
+print(a)
