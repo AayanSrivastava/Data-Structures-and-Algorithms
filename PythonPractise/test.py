@@ -132,10 +132,13 @@
 #     c.append(b)
 # print(c)
 
-a=[1,2,3,4]
-for i in range(len(a)):
-    if i%2!=0:
-        a.insert(i,(a[len(a)-1]))
-        # a.remove((a[len(a)-1]))
-        a.pop()
-print(a)
+# a=[1,2,3,4]
+# for i in range(len(a)):
+#     if i%2!=0:
+#         a.insert(i,(a[len(a)-1]))
+#         # a.remove((a[len(a)-1]))
+#         a.pop()
+# print(a)
+
+for i in range(-1,-5,-1):
+    print(i,end=" ")
