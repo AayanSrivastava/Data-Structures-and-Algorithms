@@ -76,7 +76,7 @@ class stack:
     def display(self):
         return self.container 
 
-s=[1,3,2,4]
+s=[10,6,8,5,11,9]
 a=[]
 st=stack()
 for i in range(len(s)-1,-1,-1):  #next greater to right

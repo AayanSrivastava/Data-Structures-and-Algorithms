@@ -51,14 +51,14 @@ st1 = stack()
 for i in range(len(s)-1,-1,-1):  #next smaller to right
 # for i in range(len(s)):   next smalller to left
     if st1.size()==0:
-        b.append(-1)
+        b.append(len(s))
     elif st1.size()>0 and st1.top()[0]<s[i]:
         b.append(st1.top()[1])
     elif st1.size()>0 and st1.top()[0]>=s[i]:
         while st1.size()>0 and st1.top()[0]>=s[i]:
             st1.pop()
         if st1.size()==0:
-            b.append(-1)
+            b.append(len(s))
         else:
             b.append(st1.top()[1])
     st1.push(s[i],i)
