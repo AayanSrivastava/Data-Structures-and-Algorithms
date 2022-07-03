@@ -58,4 +58,5 @@ int main()
     enqueue(&q,4);
     dequeue(&q);
     display(&q);
+    display(&q);
 }

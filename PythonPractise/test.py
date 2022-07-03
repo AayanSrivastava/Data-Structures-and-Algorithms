@@ -140,5 +140,47 @@
 #         a.pop()
 # print(a)
 
-for i in range(-1,-5,-1):
-    print(i,end=" ")
+# for i in range(-1,-5,-1):
+#     print(i,end=" ")
+# words = ["abcw","baz","foo","bar","xtfn","abcdef"]
+# a=[]
+# for i in words:
+#     h={}
+#     for j in i:
+#         if j in h:
+#             h[j]+=1
+#         else:
+#             h[j]=1
+#     a.append(h)
+# for i in a:
+
+# print(a)
+
+n=int(input())
+a=list(map(int,input().split(" ")))
+
+dummy=
+b=list(a)
+if a==b:
+    print("Hannah will get treat")
+else:
+    print("Clay will get treat")
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    def Hannahclay(head):
+        cur = head
+        a=[]
+        while cur:
+            a.append(cur.val)
+            cur = cur.next
+            
+        dummy= cur = ListNode(0)
+obj=Solution
+n=int(input())
+a=list(map(int,input().split(" ")))
+print(obj.Hannahclay(a))
