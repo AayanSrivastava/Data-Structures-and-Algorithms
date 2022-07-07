@@ -38,11 +38,18 @@
 # print(list(l1))
 # print(list(l2)[0:2])
 
-def fib(n):
-    if n==0:
-        return 0
-    if n==1:
-        return 1
-    return fib(n-1) + fib(n-2)
-print(fib(6))
+# def fib(n):
+#     if n==0:
+#         return 0
+#     if n==1:
+#         return 1
+#     return fib(n-1) + fib(n-2)
+# print(fib(6))
     
+nums=[1,2,3]
+l=[[]]
+for i in range(len(nums)):
+    for j in range(i+1,len(nums)+1):
+        l.append(nums[i:j])
+l.sort()
+print(l)
