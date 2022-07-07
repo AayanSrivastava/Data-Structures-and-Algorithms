@@ -26,14 +26,23 @@
 # matrix1 = [[0 for i in range(m)] for j in range (n)]
 # print(matrix1)
 
-points = [[3,3],[5,-1],[-2,4]]
-a=[]
-for i in points:
-    s=0
-    for k in i:
-        s+=abs(k)**2
-    a.append((s,i))
-a.sort(key=lambda x:x[0])
-l1,l2=list(zip(*a))
-print(list(l1))
-print(list(l2)[0:2])
+# points = [[3,3],[5,-1],[-2,4]]
+# a=[]
+# for i in points:
+#     s=0
+#     for k in i:
+#         s+=abs(k)**2
+#     a.append((s,i))
+# a.sort(key=lambda x:x[0])
+# l1,l2=list(zip(*a))
+# print(list(l1))
+# print(list(l2)[0:2])
+
+def fib(n):
+    if n==0:
+        return 0
+    if n==1:
+        return 1
+    return fib(n-1) + fib(n-2)
+print(fib(6))
+    
