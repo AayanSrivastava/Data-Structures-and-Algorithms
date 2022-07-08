@@ -46,10 +46,14 @@
 #     return fib(n-1) + fib(n-2)
 # print(fib(6))
     
-nums=[1,2,3]
-l=[[]]
-for i in range(len(nums)):
-    for j in range(i+1,len(nums)+1):
-        l.append(nums[i:j])
-l.sort()
-print(l)
+# nums=[1,2,3]
+# l=[[]]
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)+1):
+#         l.append(nums[i:j])
+# l.sort()
+# print(l)
+
+l=[4, 6, 2, 3, 8, 9]
+a= reduce (lambda x,y:x^y,l) 
+print(a)
