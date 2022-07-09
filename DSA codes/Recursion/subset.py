@@ -1,18 +1,18 @@
 class Solution:
     def sub1(self,nums,output,index,ans):
         
-            #base case
-            if index>=len(nums):
-                ans.append(output[:])
-                return
+        #base case
+        if index>=len(nums):
+            ans.append(output[:])
+            return
 
-            # include
-            output.append(nums[index])
-            self.sub1(nums,output,index+1,ans)
-        
-            # exclude
-            output.pop()
-            self.sub1(nums,output,index+1,ans)
+        # include
+        output.append(nums[index])
+        self.sub1(nums,output,index+1,ans)
+    
+        # exclude
+        output.pop()
+        self.sub1(nums,output,index+1,ans)
             
     def subsets(self,nums):
         output=[]

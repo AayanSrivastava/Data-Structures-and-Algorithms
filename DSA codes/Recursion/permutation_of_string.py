@@ -12,12 +12,12 @@ class Solution:
             
     def find_permutation(self, S):
         S=list(S)
-        print(S)
+        # print(S)
         ans=[]
         index=0
         self.solve(S,ans,index)
         return ans
 
 l1=Solution()
-s="ABB"
+s="ABC"
 print(l1.find_permutation(s))
