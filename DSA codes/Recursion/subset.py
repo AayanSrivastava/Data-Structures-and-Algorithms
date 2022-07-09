@@ -22,5 +22,5 @@ class Solution:
         return ans
     
 l=Solution()
-s=[1,2,3]
+s=[1,2,3,4]
 print(l.subsets(s))
