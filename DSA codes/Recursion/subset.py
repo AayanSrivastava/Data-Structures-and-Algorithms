@@ -3,7 +3,7 @@ class Solution:
         
         #base case
         if index>=len(nums):
-            ans.append(output[:])
+            ans.append(''.join(output[:]))
             return
 
         # include
@@ -18,9 +18,10 @@ class Solution:
         output=[]
         ans=[]
         index=0
+        nums=list(nums)
         self.sub1(nums,output,index,ans)
         return ans
     
 l=Solution()
-s=[1,2,3]
+s="AAB"
 print(l.subsets(s))
