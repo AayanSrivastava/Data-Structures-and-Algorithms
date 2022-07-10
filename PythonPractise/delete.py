@@ -54,6 +54,13 @@
 # l.sort()
 # print(l)
 
-l=[4, 6, 2, 3, 8, 9]
-a= reduce (lambda x,y:x^y,l) 
-print(a)
+# l=[4, 6, 2, 3, 8, 9]
+# a= reduce (lambda x,y:x^y,l) 
+# print(a)
+
+a=[1,2,5]
+b=[1,2,5]
+if a==b:
+    print("True")
+else:
+    print("False")
