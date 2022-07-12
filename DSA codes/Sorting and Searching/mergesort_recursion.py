@@ -1,5 +1,5 @@
 
-def merge(arr,l,mid,r):
+def merge(arr,mid):
     a=arr[:mid+1]
     b=arr[mid+1:]
     i=0
@@ -30,7 +30,7 @@ def mergesort(arr,l,r):
     
     mergesort(arr,l,mid)
     mergesort(arr,mid+1,r)
-    merge(arr,l,mid,r)
+    merge(arr,mid)
     return arr
 
 arr=[2,5,1,6,9]
