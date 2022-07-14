@@ -1,7 +1,7 @@
 class Solution:
     def solve(self,S,ans,index):
-        if index>=len(S) and ''.join(S[:]) not in ans:
-            ans.append(''.join(S[:]))
+        if index>=len(S) and (S[:]) not in ans:
+            ans.append((S[:]))
             return
         
         for i in range(index,len(S)):
@@ -11,13 +11,14 @@ class Solution:
             S[index],S[i]=S[i],S[index]
             
     def find_permutation(self, S):
-        S=list(S)
+        # S=list(S)
         # print(S)
         ans=[]
         index=0
         self.solve(S,ans,index)
-        return ans
+        ans.sort()
+        return ans[1]
 
 l1=Solution()
-s="ABC"
+s=[1,2,3]
 print(l1.find_permutation(s))
