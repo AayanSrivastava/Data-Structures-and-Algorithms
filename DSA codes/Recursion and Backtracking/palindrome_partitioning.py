@@ -3,6 +3,7 @@ class Solution:
         if index==len(nums):
             ans.append(output[:])
             return
+            
         for i in range(index,len(nums)):
             if nums[index:i+1]==nums[index:i+1][::-1]:
                 output.append(nums[index:i+1])
