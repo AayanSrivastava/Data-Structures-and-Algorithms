@@ -36,6 +36,7 @@ int count(struct node *p)
     }
     return c;
 }
+
 int Rcount(struct node *p)
 {
     int c=0;

@@ -71,6 +71,7 @@ int main()
 	display(s);
 	return 0;
 }
+
 void display(struct student p[])
 {
 	int i;

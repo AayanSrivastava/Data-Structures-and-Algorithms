@@ -11,7 +11,7 @@ class Solution:
             S[index],S[i]=S[i],S[index]
             
     def find_permutation(self, S):
-        # S=list(S)
+        S=list(S)
         # print(S)
         ans=[]
         index=0
@@ -20,5 +20,5 @@ class Solution:
         return ans[1]
 
 l1=Solution()
-s=[1,2,3]
+s="123"
 print(l1.find_permutation(s))

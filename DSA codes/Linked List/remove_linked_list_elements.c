@@ -53,6 +53,7 @@ void display(struct node *p)
     }
 }
 
+
 int main()
 {
     int n,i,*a;

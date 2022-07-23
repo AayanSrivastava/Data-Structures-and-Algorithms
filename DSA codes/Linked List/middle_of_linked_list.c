@@ -25,8 +25,8 @@ void create(int A[],int n)
     }
 }
 
-struct node* middleNode(struct node* head){
-        struct node *first1;
+int middleNode(struct node* head){
+        struct node* first1;
         first1=head;
         int i,c=1;
         while(first1 && first1->next)
@@ -39,7 +39,19 @@ struct node* middleNode(struct node* head){
         {
             first1=first1->next;
         }
-    return first1;
+    return first1->data;
+}
+
+int middlep(struct node* head)
+{
+    struct node* slow=head;
+    struct node* fast=head;
+    while (fast && fast->next)
+    {
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+    return slow->data;
 }
 void display(struct node *p)
 {
@@ -63,6 +75,7 @@ int main()
         scanf("%d",&a[i]);
     }
     create(a,n);
-    middleNode(first);
+    printf("%d\n",middleNode(first));
+    printf("%d\n",middlep(first));
     display(first);
 }
