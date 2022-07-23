@@ -38,6 +38,7 @@ struct ListNode* reverseList(struct ListNode* head){
     p1=q;
     return p1;
 }
+
 void display(struct ListNode *p)
 {
     p=first;

@@ -13,6 +13,7 @@ class linked:
             self.head = Node(val)
             return
 
+
         curr = self.head
         while curr.next!=None:
             curr=curr.next
