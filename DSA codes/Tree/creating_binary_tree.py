@@ -7,10 +7,11 @@ class Tree:
     def createNode(self,data):
         return Node(data)
     
-    def insert(self,node,data):
-        # data=int(input())
-        if node is None:
-           return self.createNode(data)
+    def insert(self,node):
+        data=int(input("Enter the data of node"))
+        node=self.createNode(data)
+        if data==-1:
+           return None
         node.left=self.insert(node.left,data)
         node.right=self.insert(node.right,data)
         return node
@@ -33,12 +34,9 @@ class Tree:
             print(root.data)
     
 l=Tree()
-root=l.createNode(0) 
-l.insert(root,1)
-l.insert(root,2)
-l.insert(root,4)
-l.insert(root,3)
-l.insert(root,5)
+root=None
+l.insert(root)
+
 # l.postorder(root.right)
-l.inorder(root.right)
+l.inorder(root)
 # l.preorder(root.right)
