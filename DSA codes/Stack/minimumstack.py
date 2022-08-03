@@ -24,14 +24,3 @@
 
 # stack=[5,4,7,3,9,1,2]
 # print(rmin(stack))
-
-a=[1,2,3,4]
-b=[5,6,1,7]
-c=0
-for i in b:
-    if i in a:
-        c+=1
-if c>=1:
-    print("True")
-else:
-    print("False")
