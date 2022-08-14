@@ -40,7 +40,7 @@ class Solution:
         
     
 l=Solution()
-root=l.createNode(0)
+root=TreeNode(0)
 l.insert(root,1)
 l.insert(root,2)
 l.insert(root,3)
@@ -48,4 +48,4 @@ l.insert(root,4)
 l.insert(root,5)
 l.insert(root,6)
 l.insert(root,7)
-print(l.levelOrder(root.right))
+print(l.levelOrder(root))
