@@ -4,7 +4,6 @@ class Node:
         self.next=None
     
 class linked:
-
     def __init__(self):
         self.head=None
 
@@ -25,14 +24,7 @@ class linked:
         while (n != None):
             print(n.data, end=" ")
             n = n.next
-    
-    def sort(self,n):
-        a=[]
-        while (n != None):
-            a.append(n.data)
-            n = n.next
-        a.sort()
-        return a
+
 
 l1 = linked()
 l1.addNode(10) 
@@ -41,4 +33,3 @@ l1.addNode(60)
 l1.addNode(35) 
 l1.addNode(50) 
 l1.printList(l1.head)
-print(l1.sort(l1.head))
