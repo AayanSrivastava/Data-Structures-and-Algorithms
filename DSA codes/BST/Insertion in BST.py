@@ -13,32 +13,6 @@ def insert(root,key):
         root.right=insert(root.right,key)
     return root
 
-def floor(root,key):
-    ans=-1
-    while root:
-        if root.val==key:
-            ans=root.val
-            return ans
-        elif key>root.val:
-            ans=root.val
-            root=root.right
-        else:
-            root=root.left
-    return ans
-
-def ceil(root,key):
-    ans=-1
-    while root:
-        if root.val==key:
-            ans=root.val
-            return ans
-        if key>root.val:
-            root=root.right
-        else:
-            ans=root.val
-            root=root.left
-        return ans
-
 def inorder(root):
     if root==None:
         return
