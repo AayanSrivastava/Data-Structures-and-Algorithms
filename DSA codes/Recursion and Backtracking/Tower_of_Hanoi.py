@@ -7,9 +7,5 @@ def TOH(n,source,destination,helper,c):
     TOH(n-1,helper,destination,source,c)
     print(c)
 
-s=1
-h=2
-d=3
-n=2
 c=0
-print(TOH(2,s,d,h,c))
+TOH(3,1,2,3,c)
