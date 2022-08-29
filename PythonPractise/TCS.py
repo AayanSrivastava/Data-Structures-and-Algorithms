@@ -21,19 +21,19 @@
 # index = n // 2 - 1
 # print("Minimum M required is:", a[index])
 
-s=input()
-i=0
-ns=""
-while i<len(s):
-    c=s[i]
-    i+=1
-    count=1
-    while i<len(s) and c==s[i]:
-        count+=1
-        i+=1
-    ns+=c+str(count)
-if len(ns)<len(s):
-    print("Yes")
-else:
-    print("No")
-print(count)
+# s=input()
+# i=0
+# ns=""
+# while i<len(s):
+#     c=s[i]
+#     i+=1
+#     count=1
+#     while i<len(s) and c==s[i]:
+#         count+=1
+#         i+=1
+#     ns+=c+str(count)
+# if len(ns)<len(s):
+#     print("Yes")
+# else:
+#     print("No")
+# print(count)
