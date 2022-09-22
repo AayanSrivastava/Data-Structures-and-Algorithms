@@ -1,6 +1,6 @@
 class Solution:
     def solve(self,S,ans,index):
-        if index>=len(S) and (S[:]) not in ans:
+        if index>=len(S):
             ans.append((S[:]))
             return
         
@@ -17,8 +17,8 @@ class Solution:
         index=0
         self.solve(S,ans,index)
         ans.sort()
-        return ans[1]
+        return ans
 
 l1=Solution()
-s="123"
+s="aaaa"
 print(l1.find_permutation(s))
