@@ -31,3 +31,27 @@ def dfs(adj):
     print()
 
 dfs(adj_mat_undir)
+
+
+
+# GFG DFS
+# def dfsOfGraph(self, V, adj):
+#     ans=[]
+#     vis=set()
+#     n=V #Adjacency list
+#     for i in range(n):
+#         if i in vis:
+#             continue
+#         vis.add(i)
+
+#         q=deque([i])
+#         ans.append(0)
+#         while q:
+#             node=q.pop()
+#             if node not in vis:
+#                 vis.add(node)
+#                 ans.append(node)
+#             for adjnode in adj[node][::-1]:
+#                 if adjnode not in vis:
+#                     q.append(adjnode)
+#         return ans
