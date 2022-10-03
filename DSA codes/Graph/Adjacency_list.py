@@ -17,4 +17,4 @@ def create_adj_list(edges):
     return adj
 
 adj_list=create_adj_list([[0,1],[1,2],[1,3],[2,4],[3,4],[5,7],[7,6]])
-print(adj_list)
+print(adj_list_dir[0])
