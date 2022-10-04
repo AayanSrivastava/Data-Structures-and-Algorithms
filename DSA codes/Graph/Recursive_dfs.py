@@ -24,20 +24,16 @@ adj_mat=create_adj_mat([[0,1],[1,2],[1,3],[2,4],[3,4],[5,7],[7,6]])
 # adj_mat=create_adj_mat([[0,1],[0,2],[0,3],[1,3],[2,4],[3,5],[3,6],[4,7]])
 
 
-def dfsm(node,vis,adj,ans):
+def dfs(node,vis,adj,ans):
     vis.add(node)
     ans.append(node)
-    n=len(adj)
+    # n=len(adj)
+    n=max(adj)+1
     for adjnode in range(n):
-        if adj[node][adjnode] and adjnode not in vis:
-            dfsm(adjnode,vis,adj,ans)
+        # if adj[node][adjnode] and adjnode not in vis:
+        if adjnode not in vis:  #Adjacency list
+            dfs(adjnode,vis,adj,ans)
 
-def dfsl(node,vis,adj,ans):
-    vis.add(node)
-    ans.append(node)
-    for adjnode in adj[node]:
-        if adjnode not in vis:
-            dfsl(adjnode,vis,adj,ans)
 
 def dfsofGraph(adj):
     ans=[]
@@ -46,7 +42,7 @@ def dfsofGraph(adj):
     # n=len(adj)
     for i in range(n):
         if i not in vis:
-            dfsl(i,vis,adj,ans)
+            dfs(i,vis,adj,ans)
     return ans
 
 # print(dfsofGraph(adj_mat))

@@ -30,8 +30,8 @@ adj_mat=create_adj_mat([[0,1],[1,2],[1,3],[2,4],[3,4],[5,7],[7,6]])
 def bfs(adj):
     print("BFS")
     vis=set()
-    n=len(adj)  #Adjacency matrix
-    # n=max(adj)+1 #Adjacency list
+    # n=len(adj)  #Adjacency matrix
+    n=max(adj)+1 #Adjacency list
     for i in range(n):
         if i in vis:
             continue
@@ -43,8 +43,8 @@ def bfs(adj):
             print(node,end=" ")
             
             for adjnode in range(n):
-                if adj[node][adjnode] and adjnode not in vis:  #Adjacency matrix
-                # if adjnode in adj[node] and adjnode not in vis:  #Adjacency list
+                # if adj[node][adjnode] and adjnode not in vis:  #Adjacency matrix
+                if adjnode in adj[node] and adjnode not in vis:  #Adjacency list
                     vis.add(adjnode)
                     q.appendleft(adjnode)
 
@@ -56,5 +56,5 @@ def bfs(adj):
         # if returning list return here(indentation)
     print()
 
-bfs(adj_mat)
-# bfs(adj_list)
+# bfs(adj_mat)
+bfs(adj_list)
