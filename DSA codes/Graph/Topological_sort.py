@@ -1,5 +1,5 @@
+#DFS
 class Solution:
-    
     def topo(self,node,vis,adj,st):
         vis.add(node)
         for adjnode in adj[node]:
