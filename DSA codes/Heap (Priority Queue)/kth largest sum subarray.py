@@ -18,7 +18,7 @@ class Solution:
                 sum1+=Arr[j]
                 op.append(sum1)
         hp=[]
-        heapq.heapify(hp)
+        # heapq.heapify(hp)
         for i in op:
             if len(hp)<K:
                 heapq.heappush(hp,i)
