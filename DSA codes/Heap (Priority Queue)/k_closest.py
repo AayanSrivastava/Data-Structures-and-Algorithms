@@ -1,17 +1,16 @@
 import heapq
-def kclosest(ar,x,k):
+def kclosest(arr,x,k):
     hp=[]
-    for i in ar:
+    for i in arr:
         if len(hp)<k:
-            heapq.heappush(hp,(abs(i-x),i))
+            heapq.heappush(hp,(-abs(i-x),i))  #we need minimum so -abs
         else:
-            if hp[0][0]>abs(i-x):
-                heapq.heappush(hp,(abs(i-x),i))
+            if -hp[0][0]>abs(i-x):
                 heapq.heappop(hp)
-    hp=[hp[i][1] for i in range(k)]
-    return hp
+                heapq.heappush(hp,(-abs(i-x),i))
+    return sorted([hp[i][1] for i in range(len(hp))])
 
-ar=[5,6,7,8,9]
+arr=[5,6,7,8,9]
 x=7
 k=3
-print(kclosest(ar,x,k))
+print(kclosest(arr,x,k))
