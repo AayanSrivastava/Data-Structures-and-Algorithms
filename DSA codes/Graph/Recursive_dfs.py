@@ -31,7 +31,7 @@ def dfs(node,vis,adj,ans):
     n=max(adj)+1
     for adjnode in range(n):
         # if adj[node][adjnode] and adjnode not in vis:
-        if adjnode not in vis:  #Adjacency list
+        if adjnode in adj[node] and adjnode not in vis:  #Adjacency list
             dfs(adjnode,vis,adj,ans)
 
 
