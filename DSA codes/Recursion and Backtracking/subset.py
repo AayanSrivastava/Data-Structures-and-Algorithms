@@ -23,5 +23,5 @@ class Solution:
         return ans
     
 l=Solution()
-s="abbb"
+s="1234"
 print(l.subsets(s))
