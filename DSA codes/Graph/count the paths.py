@@ -14,5 +14,5 @@ class Solution:
             else:
                 for adjnode in adj[node]:
                     stack.append((adjnode,path+[adjnode]))
-        return len(ans)
-        # return ans
+        # return len(ans)
+        return ans
