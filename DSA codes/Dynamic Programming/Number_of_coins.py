@@ -10,9 +10,10 @@ class Solution:
             return dp[V]
         minc=math.inf
         for i in range(0,M):
-            ans=self.numofcoins(coins,M,V-coins[i],dp)
-            if ans!=math.inf:
-                minc=min(minc,1+ans)
+            if V>=coins[i]:
+                ans=self.numofcoins(coins,M,V-coins[i],dp)
+                if ans!=math.inf:
+                    minc=min(minc,1+ans)
         dp[V]=minc
         return dp[V]
     
