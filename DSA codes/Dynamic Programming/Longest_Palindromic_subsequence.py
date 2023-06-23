@@ -39,10 +39,10 @@ class Solution:
             prev=cur
         return prev[0]
 
-    def longestCommonSubsequence(self, text1, text2):
-        # n=len(text1)
-        # m=len(text2)
+    def longestPalindromeSubseq(self, s):
+        # n=len(s)
+        # m=len(s)
         # dp=[[-1]*m for j in range(n)]
-        # return self.solve(text1,text2,n-1,m-1,dp)
-        # return self.solvetab(text1,text2)
-        return self.solveopt(text1,text2)
+        # return self.solve(s,s[::-1],n-1,m-1,dp)
+        # return self.solvetab(s,s[::-1])
+        return self.solveopt(s,s[::-1])
