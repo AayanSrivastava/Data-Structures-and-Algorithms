@@ -30,3 +30,5 @@ class Solution:
     def longestCommonSubstr(self, S1, S2, n, m):
         # return self.solvetab(S1,S2)
         return self.solveopt(S1,S2)
+
+# Solved
