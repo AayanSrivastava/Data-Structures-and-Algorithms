@@ -3,6 +3,7 @@
 
 //INSERTION AT ITH POS.
 
+
 struct ArrayADT
 {
     int *a;
