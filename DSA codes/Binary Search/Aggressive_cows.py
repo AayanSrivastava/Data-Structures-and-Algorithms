@@ -23,4 +23,3 @@ def aggressiveCows(stalls, k):
         else:
             end=mid-1
     return res
-    
