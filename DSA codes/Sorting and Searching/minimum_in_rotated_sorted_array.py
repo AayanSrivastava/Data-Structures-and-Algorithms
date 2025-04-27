@@ -6,6 +6,9 @@ def findMin(nums):
         next1=(mid+1)%len(nums)
         prev=(mid+len(nums)-1)%len(nums)
 
+
+
+
         if nums[mid]<=nums[next1] and nums[mid]<=nums[prev]:
             return nums[mid]
         elif nums[mid]<=nums[end]:
@@ -14,6 +17,7 @@ def findMin(nums):
             start=mid+1
 
     return 
+
 
 s=[1,2,4,6,3,6]
 print(findMin(s))

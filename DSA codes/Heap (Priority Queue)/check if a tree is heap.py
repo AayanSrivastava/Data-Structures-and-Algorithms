@@ -1,5 +1,6 @@
 class Solution:
     #Your Function Should return True/False
+    
     def maxorder(self,root):
         if root.left==None and root.right==None:
             return True
