@@ -3,6 +3,7 @@
 #include<stdbool.h>
 
 
+
 // struct Array
 // {
 //     int a[10];
