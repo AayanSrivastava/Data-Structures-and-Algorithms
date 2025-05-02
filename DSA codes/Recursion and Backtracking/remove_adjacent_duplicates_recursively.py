@@ -9,7 +9,11 @@ class Solution:
                 i += 1
             return self.remove(S[i:])
         else:
-            return S[0] + self.remove(S[1:])
+            rest = self.remove(S[1:])
+            if rest and rest[0] == S[0]:
+                return self.remove(rest)
+            else:
+                return S[0] + rest
         
 if __name__ == "__main__":
     S = "geeksforgeek"
