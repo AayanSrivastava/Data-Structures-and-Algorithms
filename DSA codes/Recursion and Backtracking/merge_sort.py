@@ -1,4 +1,4 @@
-class Solution:
+class Solution: # Divide and merge
     def mergeSort(self,arr, low, high):
         if low>=high:
             return
