@@ -4,7 +4,11 @@ class Solution:
             ans.append(S[:])
             return
         
+        seen= set()
         for i in range(index,len(S)):
+            if S[i] in seen:
+                continue
+            seen.add(S[i])
             S[index],S[i]=S[i],S[index]
             self.solve(S,ans,index+1)
             # backtracking
@@ -14,7 +18,7 @@ class Solution:
         ans=[]
         index=0
         self.solve(S,ans,index)
-        return ans
+        return sorted(ans)
 
 l=Solution()
 s=[1,2,3]
