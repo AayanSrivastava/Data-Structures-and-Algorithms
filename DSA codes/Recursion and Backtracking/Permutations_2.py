@@ -20,5 +20,5 @@ class Solution:
         return ans
 
 obj = Solution()
-nums=[1,1,2]
+nums=[1,2,3]
 print(obj.permuteUnique(nums))
