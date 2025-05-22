@@ -22,6 +22,7 @@ class Solution:
         self.sub1(nums,output,index,ans)
         return set(ans)
 
+
     def solve(self,S,ans,index):
         if index>=len(S) and ''.join(S[:]) not in ans:
             ans.append(''.join(S[:]))
