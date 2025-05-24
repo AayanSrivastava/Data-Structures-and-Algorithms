@@ -2,7 +2,7 @@ class Solution:
     def sub1(self,nums,output,index,ans):
         
         #base case
-        if index>=len(nums) and ''.join(output) not in ans:
+        if index>=len(nums) :
             ans.append(''.join(output[:]))
             return
 
@@ -23,5 +23,5 @@ class Solution:
         return ans
     
 l=Solution()
-s="1234"
+s="AAB"
 print(l.subsets(s))
