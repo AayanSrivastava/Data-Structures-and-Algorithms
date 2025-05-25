@@ -28,12 +28,14 @@ class Solution:
         
         while queue:
             level=[]
-            node=queue.pop()
-            if node.left!=None:
-                queue.append(node.left)
-            if node.right!=None:
-                queue.append(node.right)
-            level.append(node.val)
+            n = len(queue)
+            for i in range(n):
+                node=queue.popleft()
+                if node.left!=None:
+                    queue.append(node.left)
+                if node.right!=None:
+                    queue.append(node.right)
+                level.append(node.val)
                 
             ans.append(level)
         return ans

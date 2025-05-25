@@ -1,14 +1,13 @@
 class Solution:
-    r=float('-inf')
-    def height(self,root):
-        if root==None:
+    maxi = float('-inf')
+    def solve(self, root):
+        if root == None:
             return 0
-        
-        leftsum=max(0,self.height(root.left))
-        rightsum=max(0,self.height(root.right))
-        self.r=max(self.r,root.val+leftsum+rightsum)
-        return root.val+max(leftsum,rightsum)
-    
-    def maxPathSum(self, root):
-        self.height(root)
-        return self.r
+        leftsum = max(0, self.solve(root.left))
+        rightsum = max(0, self.solve(root.right))
+        self.maxi = max(self.maxi, leftsum + rightsum + root.val)
+        return max(leftsum, rightsum) + root.val
+
+    def maxPathSum(self, root) -> int:
+        self.solve(root)
+        return self.maxi
