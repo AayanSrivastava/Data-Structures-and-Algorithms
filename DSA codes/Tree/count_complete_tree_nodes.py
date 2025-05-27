@@ -17,3 +17,8 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
         return c
+    
+#Recursive
+# if root == None:
+#     return 0
+# return 1+ self.fun(root.left) + self.fun(root.right)

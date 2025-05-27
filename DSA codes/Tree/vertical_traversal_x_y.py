@@ -17,13 +17,14 @@ class Solution:
             q.append((node.left,x-1, y+1 ))
             q.append((node.right,x+1, y+1))
 
-        output=[]
-        for i in sorted(mapper):
-            for items in mapper[i]:
-                output.append(items)
-        return mapper
+        res= []
+        for x in sorted(mapper):
+            output=[]
+            for y in sorted(mapper[x]):
+                output.extend(sorted(mapper[x][y]))
+            res.append(output)
+        return res
     
-
 if __name__ == "__main__":
     root = TreeNode(3)
     root.left = TreeNode(9)
