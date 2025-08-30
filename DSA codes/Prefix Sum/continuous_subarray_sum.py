@@ -31,3 +31,21 @@ class Solution:
             seen.add(previous)
             previous = running
         return False
+
+
+# Brute force
+class Solution:
+    def checkSubarraySum(self, nums, k: int) -> bool:
+        n = len(nums) 
+        # Check all subarrays of length >= 2
+        for i in range(n):
+            total = nums[i]
+            for j in range(i+1, n):   # subarray must be at least length 2
+                total += nums[j]
+                if k == 0:
+                    if total == 0:   # only 0 is divisible by 0
+                        return True
+                else:
+                    if total % k == 0:
+                        return True
+        return False
