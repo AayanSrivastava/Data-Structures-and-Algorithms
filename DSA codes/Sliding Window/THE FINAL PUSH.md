@@ -6,7 +6,7 @@ Decorators, Context Managers
 Multithreading vs Multiprocessing
 Asyncio (async/await, event loop)
 Memory management, Garbage collection
-Virtual Environments & Dependency management (venv, pipenv, poetry)
+✅Virtual Environments & Dependency management (venv, pipenv, poetry)
 
 🔥Phase 3: Python Ecosystem
 
