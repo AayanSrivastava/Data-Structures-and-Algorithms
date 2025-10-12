@@ -1,3 +1,24 @@
+# BRUTE FORCE
+class Solution:
+    def longestWPI(self, hours) -> int:
+        n = len(hours)
+        maxi = 0
+        
+        for i in range(n):
+            tiring = 0
+            non_tiring = 0
+            for j in range(i, n):
+                if hours[j] > 8:
+                    tiring += 1
+                else:
+                    non_tiring += 1
+                
+                if tiring > non_tiring:
+                    maxi = max(maxi, j - i + 1)
+        
+        return maxi
+
+
 class Solution:
     def longestWPI(self, hours) -> int:
         cursum = 0
