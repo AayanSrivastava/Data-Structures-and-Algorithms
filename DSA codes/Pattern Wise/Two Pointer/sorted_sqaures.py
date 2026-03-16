@@ -10,3 +10,7 @@ class Solution:
                 ans.append(nums[j]**2)
                 j-=1
         return ans[::-1]
+
+obj = Solution()
+nums = [-4,-1,0,1,10]
+print(obj.sortedSquares(nums))
