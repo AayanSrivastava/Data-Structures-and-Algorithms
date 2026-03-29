@@ -1,3 +1,7 @@
+'''
+Find longest window with at most K "bad things"
+'''
+
 def longestOnes(self, nums, k: int) -> int:
     maxi = 0
     zero = 0

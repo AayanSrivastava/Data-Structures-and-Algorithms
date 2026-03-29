@@ -15,6 +15,8 @@ class Solution:
         return maxi
     
 #OPTIMISED
+# Extension of "Longest window with at most K "bad characters"
+# bad = window_size - most_frequent_char
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         maxi, max_count = 0,0
