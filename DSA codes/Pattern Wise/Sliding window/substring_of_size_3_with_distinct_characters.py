@@ -1,3 +1,4 @@
+from collections import defaultdict
 class Solution:
     def countGoodSubstrings(self, s: str) -> int:
         i = 0
