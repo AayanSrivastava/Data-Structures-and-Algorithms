@@ -6,7 +6,7 @@ class Solution:
         for j in range(len(arr)):
             window_sum+=arr[j]
 
-            while j-i+1 > k:
+            if j-i+1 > k:
                 window_sum-=arr[i]
                 i+=1
             
