@@ -1,3 +1,5 @@
+# Forward based, use two stack or reverse both linked list
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -8,8 +10,6 @@ class Solution:
         s1 = []
         s2 = []
         carry = 0
-        dummy = ListNode(0)
-        cur = dummy
         while l1:
             s1.append(l1.val)
             l1 = l1.next
