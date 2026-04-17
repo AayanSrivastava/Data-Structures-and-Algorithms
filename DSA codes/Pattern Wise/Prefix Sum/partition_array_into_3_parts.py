@@ -22,3 +22,27 @@ class Solution:
                 curr = 0
         
         return count >= 3
+    
+# when returning index
+    def findSplit(self, arr):
+        n = len(arr)
+        total = sum(arr)
+        if total%3!=0:
+            return [-1,-1]
+        
+        target = total//3
+        cur = 0
+        i = -1
+        j = -1
+        for idx in range(n):
+            cur+=arr[idx]
+            
+            if cur == target and i == -1:
+                i = idx
+            elif cur == 2*target and i!=-1:
+                j = idx
+                break
+        if i != -1 and j != -1 and j < len(arr) - 1:
+            return [i, j]
+    
+        return [-1, -1]
