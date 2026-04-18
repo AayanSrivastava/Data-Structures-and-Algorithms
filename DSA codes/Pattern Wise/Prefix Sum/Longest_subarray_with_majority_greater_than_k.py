@@ -3,7 +3,7 @@ class Solution:
         n = len(arr)
         
         # Step 1: Transform array
-        transformed = [1 if x > K else -1 for x in arr]
+        transformed = [1 if x > k else -1 for x in arr]
         
         prefix = 0
         max_len = 0
